@@ -1,0 +1,6 @@
+n <- 10000
+random_number <- runif(n, min = 200, max = 240)
+probality_x_gt_230 <- mean(random_number > 230)
+cat("i.p(x>230):", probality_x_gt_230, "\n")
+probality_x_between_205_and_220 <- mean(random_number >= 205 & random_number <= 220)
+cat("ii,p(205<=x<=220):", probality_x_between_205_and_220, "\n")
