@@ -1,0 +1,13 @@
+data <- data.frame(player = 1:20, before = c(22,20,19,24,25,25,28,22,30,27,24,18,16,19,19,28,24,25,25,23), after = c(24,22,19,22,28,26,28,24,30,29,25,20,17,18,18,28,26,27,27,24))
+result <- t.test(data$before, data$after, paired = TRUE)
+cat("Paired t-test results:\n")
+cat("t-value:", result$statistic, "\n")
+cat("p-value:", result$p.value, "\n")
+cat("degrees of freedom:", result$parameter, "\n")
+cat("Confidence interval for the difference:", result$conf.int, "\n")
+effect_size <- (mean(data$before) - mean(data$after)) / sd(data$before - data$after)
+cat("Effect size (Cohen's d):", effect_size, "\n")
+alpha <- 0.05
+if (result$p.value < alpha) {
+cat("The training program is statistically significant in improving max vertical jumps.\n")
+} else {
