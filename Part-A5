@@ -1,0 +1,8 @@
+lower_limit <- seq(0, 20, 5)
+upper_limit <- seq(5, 25, 5)
+mid_point <- (lower_limit + upper_limit) / 2
+freq <- c(5, 25, 40, 17, 13)
+hist_data <- rep(mid_point, freq)
+hist(hist_data, breaks = 6, main = "Histogram of Time Taken to Travel to School", xlab = "Time Taken (Minutes)", ylab = "Number of Students", col = "skyblue"
+)
+plot(mid_point, freq, type = "b", xlab = "Time Intervals", ylab = "Number of Students", main = "Frequency Polygon", pch = 16, cex = 2, col = "red",xlim = c(0, 25),ylim = c(0, max(freq) + 5))
