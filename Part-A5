@@ -1,0 +1,20 @@
+list_data <- list("Red", c(21, 32, 11), TRUE, 51.23)
+list_data
+cat("a.Access the first element in the list:")
+list_data[1]
+cat("b.Names of the elements in the list:")
+names(list_data) <- c("color", "marks", "flag", "average")
+list_data
+cat("c.Add element to some positions in the list:")
+p1 = as.numeric(readline("Enter position to insert:"))
+list_data <- append(list_data, "Canada", after = p1 - 1)
+list_data
+cat("d.Remove the element:")
+p2 = as.numeric(readline("Enter position to remove:"))
+list_data[-p2]
+cat("e.Print the first and third element:")
+list_data[1]
+list_data[3]
+cat("f.Update the third element:")
+list_data[3] <- 88.97
+list_data
