@@ -11,3 +11,5 @@ alpha <- 0.05
 if (result$p.value < alpha) {
 cat("The training program is statistically significant in improving max vertical jumps.\n")
 } else {
+cat("There is no significant improvement in max vertical jumps after the training program.\n")
+}
