@@ -1,0 +1,8 @@
+n1 <- 4
+p1 <- 0.10
+prob_x_3 <- dbinom(3, size = n1, prob = p1)
+n2 <- 12
+p2 <- 0.45
+prob_x_between_5_7 <- sum(dbinom(5:7, size = n2, prob = p2))
+cat("i.p(x=3)=", prob_x_3, "\n")
+cat("ii.p(5<=x<=7)=", prob_x_between_5_7, "\n")
