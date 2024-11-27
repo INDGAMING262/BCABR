@@ -1,0 +1,22 @@
+quadratic_equation <- function(a, b, c)
+{d <- b^2 - 4 * a * c
+if (d > 0) {
+cat("The Real and Distinct Roots:\n")
+x1 <- (-b + sqrt(d)) / (2 * a)
+x2 <- (-b - sqrt(d)) / (2 * a)
+cat("The roots of the equation are Root1:", x1, "and Root2:", x2, "\n")
+} else if (d == 0)
+{x <- -b / (2 * a)
+cat("The root of the equation is:", x, "\n")
+} else {
+real_part <- -b / (2 * a)
+img_part <- sqrt(abs(d)) / (2 * a)
+cat("Imaginary Roots:\n")
+cat("Root1:", real_part, "+", img_part, "i\n")
+cat("Root2:", real_part, "-", img_part, "i\n")
+}
+}
+a <- as.numeric(readline("Enter the value of a: "))
+b <- as.numeric(readline("Enter the value of b: "))
+c <- as.numeric(readline("Enter the value of c: "))
+quadratic_equation(a, b, c)
