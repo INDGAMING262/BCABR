@@ -1,0 +1,14 @@
+marital_status <- factor(c("Married","Single","Divorced","Married"," Single","Divorced"))
+cat("a. Check the variable is a factor")
+is.factor(marital_status)
+cat("b. Access the 2nd and 4th element in the factor")
+marital_status[c(2, 4)]
+cat("c. Remove third element from the factor ")
+marital_status[-3]
+cat("d. Modify the second element of the factor")
+marital_status[2] <- "Married" print(marital_status)
+cat("e. Add new level widowed to the factor and add the same level to the factor marital_status")
+marital_status <- factor(marital_status, levels = c(levels(marital_status), "Widowed"))
+print(marital_status)
+marital_status <- factor(c(as.character(marital_status), "Widowed"))
+print(marital_status)
