@@ -1,0 +1,22 @@
+data("iris")
+cat("1.Load the iris data:\n")
+iris
+cat("2.View first six rows of iris dataset\n")
+head(iris)
+cat("3.Summarize iris dataset\n")
+summary(iris)
+cat("4.Display number of rows and columns\n")
+dim(iris)
+cat("5.Display Column names of dataset\n")
+names(iris)
+hist(iris$Sepal.Length,col = "blue",main = "histogram",xlab = "Length",ylab = "Frequency")
+plot(iris$Sepal.Width,iris$Sepal.Length,col = "blue",main = "Scatterplot",xlab = "Sepal Width",ylab =
+"Sepal Length")
+boxplot(iris$Sepal.Width,iris$Sepal.Length,main="Box Plot of Sepal width VS Sepal Length",xlab="Sepal
+width", ylab="Sepal length", pch=19,col="Green")
+a=cor(iris$Sepal.Length, iris$Petal.Length, method = c("pearson"))
+a
+cat("10. Create correlation matrix for dataset\n")
+str(iris)
+mat<-cor(iris[,1:4])
+mat
