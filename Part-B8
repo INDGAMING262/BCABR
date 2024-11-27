@@ -1,0 +1,15 @@
+plant1 <- c(29, 27, 30, 27, 28)
+plant2 <- c(32, 33, 31, 34, 30)
+plant3 <- c(25, 24, 24, 25, 25)
+data1 <- data.frame(plant = factor(rep(1:3, each = 5)),age = c(plant1, plant2, plant3))
+data1
+result <- aov(age ~ plant, data = data1)
+summary(result)
+pvalue <- summary(result)[[1]][["Pr(>F)"]][1]
+alpha <-0.01
+pvalue
+if (pvalue < alpha) {
+cat("There is a signifant difference in the mean ages of workers at three plants(p-value=",pvalue,")")
+} else{
+cat("There is no significant difference in the mean ages of workers at three plants(p-value=",pvalue,")")
+}
